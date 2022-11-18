@@ -22,35 +22,37 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,200&display=swap"
         rel="stylesheet"
     ></link>
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-    <form>
+    <form onsubmit="event.preventDefault(); handleLogin()">
         <div class="sign-in">
           <div class="signIn-form">
             <a href="/">
-              <img src="./assets/trade_name.svg" alt="trade name icon" >
+              <img src="../assets/trade_name.svg" alt="trade name icon" >
             </a>
             <p>SIGN IN </p>
-            <span class="error-message">Please enter your email and password</span>
+            <span class="error-message" id="common_validate_error">Please enter your email and password</span>
             <div>
               <span>Email: </span>
               <input
+                id="emailInput"
                 type="text"
                 placeholder="Email"
               />
-              <span class="error-message">Invalid email</span>
+              <span id="error_validate_email" class="error-message"></span>
             </div>
             <div>
               <span>Password:</span>
               <input
+                id="passwordInput"
                 type="password"
                 placeholder="Password"
               />
-              <span class="error-message">Invalid password</span>
+              <span class="error-message" id="error_validate_password">Invalid password</span>
             </div>
   
-            <button type="submit">Sign In</button>
+            <button type="submit" id="btnSignIn">Sign In</button>
           </div>
           <div class="info-group">
             <a href="#">Sign up</a>
@@ -58,5 +60,6 @@
           </div>
         </div>
       </form>
+      <script src="./login.js"></script>
 </body>
 </html>

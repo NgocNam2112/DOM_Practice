@@ -248,6 +248,13 @@
     position: relative;
 }
 
+.img-container img {
+    width: 237px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
 .img-container p {
     position: absolute;
     top: 12px;
